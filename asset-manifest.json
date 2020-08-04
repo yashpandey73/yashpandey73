@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/yashpandey73/static/css/main.1ec9115e.chunk.css",
+    "main.js": "/yashpandey73/static/js/main.ea8ed857.chunk.js",
+    "main.js.map": "/yashpandey73/static/js/main.ea8ed857.chunk.js.map",
+    "runtime-main.js": "/yashpandey73/static/js/runtime-main.b0b7b4fb.js",
+    "runtime-main.js.map": "/yashpandey73/static/js/runtime-main.b0b7b4fb.js.map",
+    "static/css/2.861f4f67.chunk.css": "/yashpandey73/static/css/2.861f4f67.chunk.css",
+    "static/js/2.2d643787.chunk.js": "/yashpandey73/static/js/2.2d643787.chunk.js",
+    "static/js/2.2d643787.chunk.js.map": "/yashpandey73/static/js/2.2d643787.chunk.js.map",
+    "index.html": "/yashpandey73/index.html",
+    "precache-manifest.5eceac7bbfd08b54b5a126309bd6e8cb.js": "/yashpandey73/precache-manifest.5eceac7bbfd08b54b5a126309bd6e8cb.js",
+    "service-worker.js": "/yashpandey73/service-worker.js",
+    "static/css/2.861f4f67.chunk.css.map": "/yashpandey73/static/css/2.861f4f67.chunk.css.map",
+    "static/css/main.1ec9115e.chunk.css.map": "/yashpandey73/static/css/main.1ec9115e.chunk.css.map",
+    "static/js/2.2d643787.chunk.js.LICENSE.txt": "/yashpandey73/static/js/2.2d643787.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/yashpandey73/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0b7b4fb.js",
+    "static/css/2.861f4f67.chunk.css",
+    "static/js/2.2d643787.chunk.js",
+    "static/css/main.1ec9115e.chunk.css",
+    "static/js/main.ea8ed857.chunk.js"
+  ]
+}
