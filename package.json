@@ -2,7 +2,7 @@
   "name": "firstreactapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yashpandey73.github.io/yashpandey73",
+  "homepage": "http://yashpandey73.github.io/yashpandey73",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
