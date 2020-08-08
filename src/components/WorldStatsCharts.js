@@ -6,30 +6,78 @@ export default class WorldStatsCharts extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {}
+        this.countryInfo = this.countryInfo.bind(this);
+    }
+
+    state = {
+        xAxisData: [],
+        tcTimeline: [{}],
+        tdTimeline: [],
+        newCases: [],
+    }
+
+    componentDidMount() {
+        this.countryInfo();
+    }
+
+    countryInfo = async () => {
+        fetch('https://api.thevirustracker.com/free-api?countryTimeline=IN')
+            .then(res => res.json())
+            .then((data) => {
+                var xAxis = [];
+                var arrTc = [];
+                var arrTd = [];
+                var newCases = [];
+                Object.keys(data.timelineitems[0]).forEach(function (k, v) {
+                    xAxis.push(k);
+                    arrTc.push(data.timelineitems[0][k].total_cases)
+                    arrTd.push(data.timelineitems[0][k].total_deaths)
+                    newCases.push(data.timelineitems[0][k].new_daily_cases)
+                });
+                this.setState({ xAxisData: xAxis })
+                this.setState({ tcTimeline: arrTc })
+                this.setState({ tdTimeline: arrTd })
+                this.setState({ newCases: newCases })
+                console.log(this.state.tcTimeline)
+                console.log(this.state.tdTimeline)
+            })
+            .catch(console.log)
     }
 
     render() {
-
+        //const { classes } = this.props
         const options = {
             chart: {
-                type: 'spline'
+                type: 'areaspline',
+                scrollablePlotArea: {
+                    minWidth: 100
+                }
+            },
+            credits: {
+                enabled: false
             },
             title: {
-                text: 'My chart'
+                text: 'Covid-19 India Data'
             },
-           /*  plotOptions: {
-                series: {
-                    pointStart: [Date.UTC(2013,5,2),0.7695]
-                }
-            }, */
+            xAxis: {
+                categories: this.state.xAxisData
+            },
             series: [
-                {   name: 'Data',
-                    data: [[Date.UTC(2013,5,2),0.7695], 
-                    [Date.UTC(2013,6,12),2.7695], 
-                    [Date.UTC(2013,7,21),1.7695], 
-                    [Date.UTC(2013,8,18),4]]
-                    
+                {
+                    name: 'Total Cases',
+                    data: this.state.tcTimeline
+
+                },
+                {
+                    name: 'Total deaths',
+                    data: this.state.tcTimeline
+
+                }
+                ,
+                {
+                    name: 'New Cases',
+                    data: this.state.newCases
+
                 }
             ]
         };

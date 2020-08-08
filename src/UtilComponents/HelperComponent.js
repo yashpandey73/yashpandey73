@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-
+import WorldStatsCharts from "../components/WorldStatsCharts";
 
 export default class HelperComponent extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      details: Object,
+      flag: false
+    }
     this.info = this.info.bind(this);
   }
-  state = {
-    details: Object,
-    flag: false
-  }
+
   componentDidMount() {
     this.info();
   }
@@ -27,10 +28,14 @@ export default class HelperComponent extends Component {
   render() {
     return (
       <div>
-        <h4>Click below For Corona Virus World Stats</h4>
-        <button onClick={this.info} >Stats</button>
-        {this.state.flag ? <Contacts details={this.state.details} /> : null}
+        <div>
+          <Contacts details={this.state.details} />
+        </div>
+        <div>
+          <WorldStatsCharts data={this.state.details} />
+        </div>
       </div>
+
 
     )
   }
@@ -39,17 +44,57 @@ export default class HelperComponent extends Component {
 export const Contacts = ({ details }) => {
   return (
     <div>
-      <center><h1>Corona Virus Updated List</h1></center>
+      <center><h1 className="alert alert-primary">Corona Virus Global Updated List</h1></center>
       <div className="card">
         <div className="card-body">
-          <h2 className="card-title">Total Cases: {details.total_cases}</h2>
-          <h5 className="card-title">Total Affected Countries</h5><p>{details.total_affected_countries}</p>
-          <h6 className="card-subtitle mb-2 text-muted">Recovery Cases:</h6><p>{details.total_recovered}</p>
-          <h6 className="card-subtitle mb-2 text-muted">UnRecovered Cases:</h6><p>{details.total_unresolved}</p>
-          <h6 className="card-subtitle mb-2 text-muted">Total Deaths:</h6><p className="card-text">{details.total_deaths}</p>
-          <h6 className="card-subtitle mb-2 text-muted">Total Active Cases:</h6><p className="card-text">{details.total_active_cases}</p>
-          <h6 className="card-subtitle mb-2 text-muted">Total New Cases Today:</h6><p className="card-text">{details.total_new_cases_today}</p>
-          <h6 className="card-subtitle mb-2 text-muted">Total New Deaths Today:</h6><p className="card-text">{details.total_new_deaths_today}</p>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">Total Cases:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_cases}</span>
+            </div>
+          </div>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">Total Affected Countries:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_affected_countries}</span>
+            </div>
+          </div>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">Recovery Cases:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_recovered}</span>
+            </div>
+          </div>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">UnRecovered Cases:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_unresolved}</span>
+            </div>
+          </div>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">Total Deaths:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_deaths}</span>
+            </div>
+          </div>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">Total Active Cases:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_active_cases}</span>
+            </div>
+          </div>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">Total New Cases Today:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_new_cases_today}</span>
+            </div>
+          </div>
+          <div class="row form-group mb-2">
+            <label class="col-md-4">Total New Deaths Today:</label>
+            <div class="input-group col-md-8">
+              <span >{details.total_new_deaths_today}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

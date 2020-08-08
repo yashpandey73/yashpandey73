@@ -103,7 +103,7 @@ export default class CountryStats extends Component {
 
         return (
             <div className="text-left">
-                Click here==><button onClick={this.Countrydata} >Stats</button>
+                <span>Click here</span><button onClick={this.Countrydata} >Stats</button>
                 {table}
             </div>
         );

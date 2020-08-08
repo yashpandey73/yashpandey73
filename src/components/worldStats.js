@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import HelperComponent from "../UtilComponents/HelperComponent"
-import WorldStatsCharts from "./WorldStatsCharts"
+
 export default class worldStats extends Component {
 
   constructor(props) {
@@ -9,7 +9,7 @@ export default class worldStats extends Component {
       flag: false
     }
     this.display = this.display.bind(this);
-    this.value = 90;
+    this.value = 213;
   }
 
   display() {
@@ -21,12 +21,11 @@ export default class worldStats extends Component {
   render() {
     return (
       <div>
-        <div className="text-left">World Stats Component
+        <div className="text-left">Total Affected Countries
         <button onClick={this.display} >click</button>
           {this.state.flag ? <p>{this.value}</p> : null}
         </div>
         <div  className="text-left"><HelperComponent/></div>
-        <div><WorldStatsCharts/></div>
       </div>
     );
   }
