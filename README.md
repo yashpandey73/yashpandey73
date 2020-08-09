@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-What is the use of this Repo
+### What is the use of this Repo
 
 This Project is a Simple ReactJS Project which demonstrates the following
 
@@ -11,7 +11,7 @@ Using Bootstrap along with React
 Using Basic Routing in React
 The project Template can be used to build bigger projects
 
-Live Application URL
+### Live Application URL
 
 https://yashpandey73.github.io/yashpandey73/
 
