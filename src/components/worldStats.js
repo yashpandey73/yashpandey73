@@ -9,12 +9,12 @@ export default class worldStats extends Component {
       flag: false
     }
     this.display = this.display.bind(this);
-    this.value = 213;
+    this.value = 215;
   }
 
   display() {
-    console.log(this.value);
-    console.log("button clicked!");
+    /* console.log(this.value);
+    console.log("button clicked!"); */
     this.setState(prevState => ({ flag: !prevState.flag }));
   }
 

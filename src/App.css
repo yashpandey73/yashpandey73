@@ -1,10 +1,22 @@
 .App {
-  text-align: center;
+  /*text-align: center;
+  background-color: #77e9f1;
+   background-image: url(./UtilComponents/Map.jpg); */
+}
+MainDiv{
+  height: 80%;
+  border: 2px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+textarea {
+  background-color: #77e9f1;
+  resize: none;
+  height:200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

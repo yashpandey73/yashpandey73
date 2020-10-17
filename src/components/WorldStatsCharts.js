@@ -38,8 +38,8 @@ export default class WorldStatsCharts extends Component {
                 this.setState({ tcTimeline: arrTc })
                 this.setState({ tdTimeline: arrTd })
                 this.setState({ newCases: newCases })
-                console.log(this.state.tcTimeline)
-                console.log(this.state.tdTimeline)
+                /* console.log(this.state.tcTimeline)
+                console.log(this.state.tdTimeline) */
             })
             .catch(console.log)
     }
@@ -57,7 +57,15 @@ export default class WorldStatsCharts extends Component {
                 enabled: false
             },
             title: {
-                text: 'Covid-19 India Data'
+                text: 'Covid-19 India Data Chart'
+            },
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    //pointStart: Date.UTC(2020, 4, 1)
+                }
             },
             xAxis: {
                 categories: this.state.xAxisData
@@ -70,7 +78,7 @@ export default class WorldStatsCharts extends Component {
                 },
                 {
                     name: 'Total deaths',
-                    data: this.state.tcTimeline
+                    data: this.state.tdTimeline
 
                 }
                 ,

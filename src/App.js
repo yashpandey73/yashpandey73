@@ -14,6 +14,7 @@ function App() {
 
 
   return (
+    
     <div className="App">
       <Router>
         <div>
@@ -24,7 +25,7 @@ function App() {
 
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link to={"/yashpandey73"} className="nav-link">
+                <Link to={"/home"} className="nav-link">
                   Home
                 </Link>
               </li>
@@ -43,7 +44,7 @@ function App() {
 
           <div className="container mt-3">
             <Switch>
-              <Route exact path={["/", "/yashpandey73"]} component={HomePage} />
+              <Route exact path={["/", "/home"]} component={HomePage} />
               <Route exact path={["/worldStats"]} component={WorldStats} />
               <Route exact path="/countryStats" component={CountryStats} />
               <Route path="/tutorials/:id" component={Tutorial} />

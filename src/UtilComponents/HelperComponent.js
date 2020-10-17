@@ -44,7 +44,7 @@ export default class HelperComponent extends Component {
 export const Contacts = ({ details }) => {
   return (
     <div>
-      <center><h1 className="alert alert-primary">Corona Virus Global Updated List</h1></center>
+      <center><h1 className="alert alert-primary">Corona Virus Global Data</h1></center>
       <div className="card">
         <div className="card-body">
           <div class="row form-group mb-2">
