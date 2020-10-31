@@ -42,7 +42,7 @@ function App() {
             </div>
           </nav>
 
-          <div className="container mt-3">
+          <div >
             <Switch>
               <Route exact path={["/", "/home"]} component={HomePage} />
               <Route exact path={["/worldStats"]} component={WorldStats} />

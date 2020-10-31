@@ -30,10 +30,10 @@ export default class worldStats extends Component {
     );
   }
 }
-class Button extends React.Component {
-  render() {
-    return (
-      <button onClick={this.props.display}>Click me</button>
-    );
-  }
-}
+// class Button extends React.Component {
+//   render() {
+//     return (
+//       <button onClick={this.props.display}>Click me</button>
+//     );
+//   }
+// }

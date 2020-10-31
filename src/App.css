@@ -2,10 +2,43 @@
   /*text-align: center;
   background-color: #77e9f1;
    background-image: url(./UtilComponents/Map.jpg); */
+    /* background: linear-gradient(130deg, #ea384d 0, #d31027 100%); */
+  
 }
-MainDiv{
-  height: 80%;
-  border: 2px;
+
+.container{
+  /* background: linear-gradient(130deg, #ea384d 0, #d31027 100%); */
+}
+
+.subHeader{
+  background: linear-gradient(130deg, #e74c3c 0, #78378c 100%);
+}
+
+.pdfSection{
+  background: linear-gradient(130deg, #2dc7ed 0, #538bf0 100%);
+  justify-content: center;
+}
+
+.suggestionSection{
+  background: linear-gradient(130deg, #f7931e 0, #fcbd38 100%);
+}
+
+.wrapper{
+  width: calc(100% - 10%);
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.richContent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -1em;
+}
+
+.text{
+  flex-basis: 400px;
+    flex-grow: 1;
 }
 
 .App-logo {
@@ -14,7 +47,7 @@ MainDiv{
 }
 
 textarea {
-  background-color: #77e9f1;
+  background: linear-gradient(120deg, #9cc5a1 0, #49a078 100%);
   resize: none;
   height:200px;
 }
