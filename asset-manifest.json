@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/yashpandey73/static/css/main.73beb14e.chunk.css",
-    "main.js": "/yashpandey73/static/js/main.ab20ece7.chunk.js",
-    "main.js.map": "/yashpandey73/static/js/main.ab20ece7.chunk.js.map",
+    "main.css": "/yashpandey73/static/css/main.dfff2377.chunk.css",
+    "main.js": "/yashpandey73/static/js/main.8f4fc55f.chunk.js",
+    "main.js.map": "/yashpandey73/static/js/main.8f4fc55f.chunk.js.map",
     "runtime-main.js": "/yashpandey73/static/js/runtime-main.b0b7b4fb.js",
     "runtime-main.js.map": "/yashpandey73/static/js/runtime-main.b0b7b4fb.js.map",
     "static/css/2.a343270d.chunk.css": "/yashpandey73/static/css/2.a343270d.chunk.css",
-    "static/js/2.3b2e33dd.chunk.js": "/yashpandey73/static/js/2.3b2e33dd.chunk.js",
-    "static/js/2.3b2e33dd.chunk.js.map": "/yashpandey73/static/js/2.3b2e33dd.chunk.js.map",
+    "static/js/2.0a9b4595.chunk.js": "/yashpandey73/static/js/2.0a9b4595.chunk.js",
+    "static/js/2.0a9b4595.chunk.js.map": "/yashpandey73/static/js/2.0a9b4595.chunk.js.map",
     "index.html": "/yashpandey73/index.html",
-    "precache-manifest.10a444a989093b6ac5d2d2dd1e838d97.js": "/yashpandey73/precache-manifest.10a444a989093b6ac5d2d2dd1e838d97.js",
+    "precache-manifest.c482e3649c4fd6563a1eb8fde27ec278.js": "/yashpandey73/precache-manifest.c482e3649c4fd6563a1eb8fde27ec278.js",
     "service-worker.js": "/yashpandey73/service-worker.js",
     "static/css/2.a343270d.chunk.css.map": "/yashpandey73/static/css/2.a343270d.chunk.css.map",
-    "static/css/main.73beb14e.chunk.css.map": "/yashpandey73/static/css/main.73beb14e.chunk.css.map",
-    "static/js/2.3b2e33dd.chunk.js.LICENSE.txt": "/yashpandey73/static/js/2.3b2e33dd.chunk.js.LICENSE.txt"
+    "static/css/main.dfff2377.chunk.css.map": "/yashpandey73/static/css/main.dfff2377.chunk.css.map",
+    "static/js/2.0a9b4595.chunk.js.LICENSE.txt": "/yashpandey73/static/js/2.0a9b4595.chunk.js.LICENSE.txt",
+    "static/media/accessible.svg": "/yashpandey73/static/media/accessible.f89c2397.svg",
+    "static/media/sample.pdf": "/yashpandey73/static/media/sample.4b41a347.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.b0b7b4fb.js",
     "static/css/2.a343270d.chunk.css",
-    "static/js/2.3b2e33dd.chunk.js",
-    "static/css/main.73beb14e.chunk.css",
-    "static/js/main.ab20ece7.chunk.js"
+    "static/js/2.0a9b4595.chunk.js",
+    "static/css/main.dfff2377.chunk.css",
+    "static/js/main.8f4fc55f.chunk.js"
   ]
 }
