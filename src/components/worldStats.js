@@ -21,10 +21,10 @@ export default class worldStats extends Component {
   render() {
     return (
       <div>
-        <div className="text-left">Total Affected Countries
+        {/* <div className="text-left">Total Affected Countries
         <button onClick={this.display} >click</button>
           {this.state.flag ? <p>{this.value}</p> : null}
-        </div>
+        </div> */}
         <div  className="text-left"><HelperComponent/></div>
       </div>
     );
