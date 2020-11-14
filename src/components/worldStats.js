@@ -21,19 +21,19 @@ export default class worldStats extends Component {
   render() {
     return (
       <div>
-        <div className="text-left">Total Affected Countries
+        {/* <div className="text-left">Total Affected Countries
         <button onClick={this.display} >click</button>
           {this.state.flag ? <p>{this.value}</p> : null}
-        </div>
+        </div> */}
         <div  className="text-left"><HelperComponent/></div>
       </div>
     );
   }
 }
-class Button extends React.Component {
-  render() {
-    return (
-      <button onClick={this.props.display}>Click me</button>
-    );
-  }
-}
+// class Button extends React.Component {
+//   render() {
+//     return (
+//       <button onClick={this.props.display}>Click me</button>
+//     );
+//   }
+// }

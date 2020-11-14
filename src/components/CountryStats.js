@@ -25,16 +25,10 @@ export default class CountryStats extends Component {
         this.MakeHttpReq();
     }
     MakeHttpReq = async () =>  {
-        fetch(`https://api.thevirustracker.com/free-api?countryTotals=ALL`)
+        fetch(`https://corona.lmao.ninja/v2/countries?yesterday&sort`)
             .then(res => res.json())
             .then((data) => {
-                var arr = [];
-                Object.keys(data.countryitems[0]).forEach(function (k, v) {
-                    if (data.countryitems[0][v] !== undefined) {
-                        arr.push(data.countryitems[0][v]);
-                    }
-                });
-                this.setState({ countrydetails: arr })
+                this.setState({ countrydetails: data })
                 this.setState({ flag: true })
             })
             .catch(console.log)
@@ -50,7 +44,7 @@ export default class CountryStats extends Component {
         let { searchInput, countrydetails } = this.state;
         let filteredData = countrydetails.filter(value => {
             return (
-                value.title.toLowerCase().includes(searchInput.toLowerCase())
+                value.country.toLowerCase().includes(searchInput.toLowerCase())
             );
         });
         this.setState({ filteredData });
@@ -61,28 +55,28 @@ export default class CountryStats extends Component {
         const columns = [
             {
                 Header: 'Country',
-                accessor: 'title'
+                accessor: 'country'
             }, {
                 Header: 'Total Cases',
-                accessor: 'total_cases'
+                accessor: 'cases'
             }, {
                 Header: 'Total Recovered',
-                accessor: 'total_recovered'
+                accessor: 'recovered'
             }, {
                 Header: 'Total Deaths',
-                accessor: 'total_deaths'
+                accessor: 'deaths'
             }, {
                 Header: 'New Cases',
-                accessor: 'total_new_cases_today'
+                accessor: 'todayCases'
             }, {
                 Header: 'New Deaths',
-                accessor: 'total_new_deaths_today'
+                accessor: 'todayDeaths'
             }, {
                 Header: 'Total Active Cases',
-                accessor: 'total_active_cases'
+                accessor: 'active'
             }, {
                 Header: 'Total Serious Cases',
-                accessor: 'total_serious_cases'
+                accessor: 'critical'
             }
         ]
         let table = null;
@@ -91,7 +85,7 @@ export default class CountryStats extends Component {
                 <input type='text' name="searchInput"
                     value={this.state.searchInput || ""}
                     onChange={this.handleChange}
-                    label="Search" />
+                    label="Search" placeholder="Search By Country"/>
                 {this.state.flag ? <ReactTable
                     data={this.state.filteredData && this.state.filteredData.length ? this.state.filteredData : this.state.countrydetails}
                     columns={columns}
@@ -102,10 +96,14 @@ export default class CountryStats extends Component {
         }
 
         return (
-            <div className="text-left">
-                <span>Click here</span><button onClick={this.Countrydata} >Stats</button>
+            <div style={css2PadDiv}>
+                {/* <span>Click here</span><button onClick={this.Countrydata} >Stats</button> */}
                 {table}
             </div>
         );
     }
 }
+
+const css2PadDiv = {
+    padding: "2rem",
+  };

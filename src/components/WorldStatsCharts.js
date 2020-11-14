@@ -13,7 +13,7 @@ export default class WorldStatsCharts extends Component {
         xAxisData: [],
         tcTimeline: [{}],
         tdTimeline: [],
-        newCases: [],
+        recovered: [],
     }
 
     componentDidMount() {
@@ -21,23 +21,25 @@ export default class WorldStatsCharts extends Component {
     }
 
     countryInfo = async () => {
-        fetch('https://api.thevirustracker.com/free-api?countryTimeline=IN')
+        fetch('https://corona.lmao.ninja/v2/historical/india?lastdays=30')
             .then(res => res.json())
             .then((data) => {
                 var xAxis = [];
                 var arrTc = [];
                 var arrTd = [];
-                var newCases = [];
-                Object.keys(data.timelineitems[0]).forEach(function (k, v) {
+                var recovered = [];
+               /*  Object.keys(data.timeline.cases).forEach(function (k, v) {
                     xAxis.push(k);
-                    arrTc.push(data.timelineitems[0][k].total_cases)
-                    arrTd.push(data.timelineitems[0][k].total_deaths)
-                    newCases.push(data.timelineitems[0][k].new_daily_cases)
-                });
+                    arrTc.push(v)
+                }); */
+                xAxis = Object.keys(data.timeline.cases);
+                arrTc = Object.values(data.timeline.cases);
+                arrTd = Object.values(data.timeline.deaths);
+                recovered = Object.values(data.timeline.recovered);
                 this.setState({ xAxisData: xAxis })
                 this.setState({ tcTimeline: arrTc })
                 this.setState({ tdTimeline: arrTd })
-                this.setState({ newCases: newCases })
+                this.setState({ recovered: recovered })
                 /* console.log(this.state.tcTimeline)
                 console.log(this.state.tdTimeline) */
             })
@@ -83,18 +85,22 @@ export default class WorldStatsCharts extends Component {
                 }
                 ,
                 {
-                    name: 'New Cases',
-                    data: this.state.newCases
+                    name: 'Total Recovered',
+                    data: this.state.recovered
 
                 }
             ]
         };
 
         return (
-            <div>
+            <div style={cssDiv}>
                 <HighchartsReact highcharts={Highcharts} options={options} />
             </div>
         );
     }
 
 }
+
+const cssDiv = {
+    padding: "3rem",
+  };
