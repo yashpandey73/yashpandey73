@@ -121,7 +121,7 @@ export default class SocialComponent extends Component {
             <div className={{}} style={{textAlign: "center"}}>
                 <a href="https://github.com/yashpandey73" style={CircleIcon}>
                     <GithubCircleIcon size={24} /></a>
-                <a href="https://www.linkedin.com/in/yash-pandey-85a806107/" style={CircleIcon}>
+                <a href="https://www.linkedin.com/in/yash-p-85a806107/" style={CircleIcon}>
                     <LinkedinCircleIcon size={24} /></a>
             </div>
         )
